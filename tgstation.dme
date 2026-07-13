@@ -7080,6 +7080,7 @@
 #include "modular_bounds\datumed\proc_overwrites\update_stat.dm"
 #include "modular_bounds\datumed\treatments\_bandage.dm"
 #include "modular_bounds\datumed\treatments\_stack_item.dm"
+#include "modular_bounds\hud_and_item_slots\outfit.dm"
 #include "modular_bounds\jobs\administrator.dm"
 #include "modular_bounds\jobs\engineer.dm"
 #include "modular_bounds\jobs\researcher.dm"

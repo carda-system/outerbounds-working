@@ -42,6 +42,18 @@
 			l_pocket = item_path
 		if(ITEM_SLOT_RPOCKET)
 			r_pocket = item_path
+		// OUTERBOUNDS ADDITION - Extra slots
+		if(ITEM_SLOT_ARMOR)
+			armor = item_path
+		if(ITEM_SLOT_SPECSTORAGE)
+			special_storage = item_path
+		if(ITEM_SLOT_CHESTRIG)
+			chestrig = item_path
+		if(ITEM_SLOT_UNDERTOP)
+			underwear_top = item_path
+		if(ITEM_SLOT_UNDERBOTTOM)
+			underwear_bottom = item_path
+		// OUTERBOUNDS ADDITION END
 
 
 /proc/collect_vv(obj/item/item)
@@ -82,7 +94,7 @@
 
 	//Copy equipment
 	var/list/result = list()
-	var/list/slots_to_check = list(ITEM_SLOT_ICLOTHING,ITEM_SLOT_BACK,ITEM_SLOT_OCLOTHING,ITEM_SLOT_BELT,ITEM_SLOT_GLOVES,ITEM_SLOT_FEET,ITEM_SLOT_HEAD,ITEM_SLOT_MASK,ITEM_SLOT_NECK,ITEM_SLOT_EARS,ITEM_SLOT_EYES,ITEM_SLOT_ID,ITEM_SLOT_SUITSTORE,ITEM_SLOT_LPOCKET,ITEM_SLOT_RPOCKET)
+	var/list/slots_to_check = list(ITEM_SLOT_ICLOTHING,ITEM_SLOT_BACK,ITEM_SLOT_OCLOTHING,ITEM_SLOT_BELT,ITEM_SLOT_GLOVES,ITEM_SLOT_FEET,ITEM_SLOT_HEAD,ITEM_SLOT_MASK,ITEM_SLOT_NECK,ITEM_SLOT_EARS,ITEM_SLOT_EYES,ITEM_SLOT_ID,ITEM_SLOT_SUITSTORE,ITEM_SLOT_LPOCKET,ITEM_SLOT_RPOCKET,ITEM_SLOT_ARMOR,ITEM_SLOT_SPECSTORAGE,ITEM_SLOT_CHESTRIG,ITEM_SLOT_UNDERBOTTOM,ITEM_SLOT_UNDERTOP) // OUTERBOUNDS EDIT - Adds armor, specstorage, chestrig, underbottom, undertop
 	for(var/slot in slots_to_check)
 		var/obj/item/item = get_item_by_slot(slot)
 		var/vedits = collect_vv(item)

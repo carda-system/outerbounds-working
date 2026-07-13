@@ -203,6 +203,18 @@
 		EQUIP_OUTFIT_ITEM(back, ITEM_SLOT_BACK)
 	if(id)
 		EQUIP_OUTFIT_ITEM(id, ITEM_SLOT_ID)
+	// OUTERBOUNDS ADDITION - Extra item slots
+	if(armor)
+		EQUIP_OUTFIT_ITEM(armor, ITEM_SLOT_ARMOR)
+	if(special_storage)
+		EQUIP_OUTFIT_ITEM(special_storage, ITEM_SLOT_SPECSTORAGE)
+	if(chestrig)
+		EQUIP_OUTFIT_ITEM(chestrig, ITEM_SLOT_CHESTRIG)
+	if(underwear_top)
+		EQUIP_OUTFIT_ITEM(underwear_top, ITEM_SLOT_UNDERTOP)
+	if(underwear_bottom)
+		EQUIP_OUTFIT_ITEM(underwear_bottom, ITEM_SLOT_UNDERBOTTOM)
+	// OUTERBOUNDS ADDITION END
 	if(!visuals_only && id_trim && user.wear_id)
 		var/obj/item/card/id/id_card = user.wear_id
 		if(!istype(id_card)) //If an ID wasn't found in their ID slot, it's probably something holding their ID like a wallet or PDA

@@ -273,6 +273,13 @@
 #define ui_ears "WEST+2:10,SOUTH+2:9"
 #define ui_neck "WEST:6,SOUTH+2:9"
 #define ui_head "WEST+1:8,SOUTH+3:11"
+// OUTERBOUNDS ADDITIONS
+#define ui_armor "WEST:6,SOUTH+4:13"
+#define ui_chestrig "WEST+1:8,SOUTH+4:13"
+#define ui_specstorage "WEST+2:10,SOUTH+4:13"
+#define ui_undertop "WEST:6,SOUTH+5:15"
+#define ui_underbottom "WEST+1:8,SOUTH+5:15"
+// OUTERBOUNDS ADDITIONS END
 
 //Generic living
 #define ui_living_pull "EAST-1:28,CENTER-3:15"

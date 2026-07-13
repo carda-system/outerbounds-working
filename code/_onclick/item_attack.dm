@@ -396,7 +396,7 @@
 
 	var/bloodied_things = ITEM_SLOT_GLOVES
 	if(damage_done >= 20 || (damage_done >= 15 && prob(25)))
-		bloodied_things |= ITEM_SLOT_ICLOTHING|ITEM_SLOT_OCLOTHING
+		bloodied_things |= ITEM_SLOT_ICLOTHING|ITEM_SLOT_OCLOTHING|ITEM_SLOT_ARMOR // OUTERBOUNDS EDIT - Adds armor slot
 		if(prob(33) && damage_done >= 10)
 			bloodied_things |= ITEM_SLOT_FEET
 		if(prob(33) && damage_done >= 24) // fireaxe damage, because heeeeere's johnny

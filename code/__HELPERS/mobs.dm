@@ -725,6 +725,18 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		slot_strings += "hand"
 	if(slot_flags & ITEM_SLOT_DEX_STORAGE)
 		slot_strings += "dextrous storage"
+	// OUTERBOUNDS ADDITION - Our extra inventory slots
+	if(slot_flags & ITEM_SLOT_ARMOR)
+		slot_strings += "armor"
+	if(slot_flags & ITEM_SLOT_SPECSTORAGE)
+		slot_strings += "special storage"
+	if(slot_flags & ITEM_SLOT_CHESTRIG)
+		slot_strings += "chest"
+	if(slot_flags & ITEM_SLOT_UNDERBOTTOM)
+		slot_strings += "underwear bottoms"
+	if(slot_flags & ITEM_SLOT_UNDERTOP)
+		slot_strings += "underwear top"
+	// OUTERBOUNDS ADDITION END
 	return slot_strings
 
 ///Returns the direction that the initiator and the target are facing

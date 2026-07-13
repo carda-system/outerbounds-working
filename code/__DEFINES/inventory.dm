@@ -62,9 +62,20 @@
 #define ITEM_SLOT_HANDCUFFED (1<<17)
 /// Legcuff slot (bolas, beartraps)
 #define ITEM_SLOT_LEGCUFFED (1<<18)
+// OUTERBOUNDS ADDITIONS
+/// Armor vest slot
+#define ITEM_SLOT_ARMOR (1<<19)
+/// Chest rig slot
+#define ITEM_SLOT_CHESTRIG (1<<20)
+/// Special storage slot
+#define ITEM_SLOT_SPECSTORAGE (1<<21)
+/// Underwear for the top half
+#define ITEM_SLOT_UNDERTOP (1<<22)
+/// Underwear for the bottom half
+#define ITEM_SLOT_UNDERBOTTOM (1<<23)
 
 /// Total amount of slots
-#define SLOTS_AMT 19 // Keep this up to date!
+#define SLOTS_AMT 24 // OUTERBOUNDS EDIT - We have more inventory slots - #define SLOTS_AMT 19 // Keep this up to date!
 
 ///Inventory slots that can be blacklisted by a species from being equipped into
 DEFINE_BITFIELD(no_equip_flags, list(
@@ -84,7 +95,8 @@ DEFINE_BITFIELD(no_equip_flags, list(
 #define ITEM_SLOT_POCKETS (ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET)
 /// Slots that are physically on you
 #define ITEM_SLOT_ON_BODY (ITEM_SLOT_ICLOTHING | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_EYES | ITEM_SLOT_EARS | \
-	ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_BACK | ITEM_SLOT_NECK )
+	ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_BACK | ITEM_SLOT_NECK | \
+	ITEM_SLOT_ARMOR | ITEM_SLOT_CHESTRIG | ITEM_SLOT_SPECSTORAGE | ITEM_SLOT_UNDERTOP | ITEM_SLOT_UNDERBOTTOM) // OUTERBOUNDS EDIT - Adds this line of slots
 
 //Bit flags for the flags_inv variable, which determine when a piece of clothing hides another. IE a helmet hiding glasses.
 //Make sure to update obscured_slots if you add more.
@@ -111,9 +123,13 @@ DEFINE_BITFIELD(no_equip_flags, list(
 #define HIDEANTENNAE (1<<15)
 // OUTERBOUNDS ADDITION BEGIN - Flags for hiding the arms and legs
 /// Hides the arms
-#define HIDEARMS (1 << 16)
+#define HIDEARMS (1<<16)
 /// Hides the legs
-#define HIDELEGS (1 << 17)
+#define HIDELEGS (1<<17)
+/// Hides underwear bottoms
+#define HIDEUNDERBOTTOMS (1<<18)
+/// Hides underwear tops
+#define HIDEUNDERTOPS (1<<19)
 // OUTERBOUND EDIT END
 
 //Bitflags for hair appendage zones
