@@ -3,8 +3,8 @@
 	var/armor = null
 	/// Special storage, maybe doesn't use this in outfits because not everyone can fit something in this slot
 	var/special_storage = null
-	/// Anything worn above the belt as storage
-	var/chestrig = null
+	/// Socks
+	var/item_socks = null
 	/// The top half of your underwear
 	var/underwear_top = null
 	/// The bottom half of your underwear

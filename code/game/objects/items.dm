@@ -1792,7 +1792,7 @@ GAME_VERB_SRC(/obj/item, verb_pickup, oview(1), "Pick up", null)
  */
 /obj/item/proc/compare_zone_to_item_slot(zone)
 	switch(slot_flags)
-		if(ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING, ITEM_SLOT_BACK, ITEM_SLOT_ARMOR, ITEM_SLOT_CHESTRIG, ITEM_SLOT_SPECSTORAGE, ITEM_SLOT_UNDERTOP) // OUTERBOUNDS EDIT - Adds armor, chestrig, specstorage, and undertop
+		if(ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING, ITEM_SLOT_BACK, ITEM_SLOT_ARMOR, ITEM_SLOT_SPECSTORAGE, ITEM_SLOT_UNDERTOP) // OUTERBOUNDS EDIT - Adds armor, specstorage, and undertop
 			return (zone == BODY_ZONE_CHEST)
 		if(ITEM_SLOT_BELT)
 			return (zone == BODY_ZONE_PRECISE_GROIN)
@@ -1804,7 +1804,7 @@ GAME_VERB_SRC(/obj/item, verb_pickup, oview(1), "Pick up", null)
 			return (zone == BODY_ZONE_PRECISE_MOUTH)
 		if(ITEM_SLOT_EYES)
 			return (zone == BODY_ZONE_PRECISE_EYES)
-		if(ITEM_SLOT_FEET, ITEM_SLOT_UNDERBOTTOM) // OUTERBOUNDS EDIT - Adds underbottoms
+		if(ITEM_SLOT_FEET, ITEM_SLOT_UNDERBOTTOM, ITEM_SLOT_SOCKS) // OUTERBOUNDS EDIT - Adds underbottoms, socks
 			return (zone == BODY_ZONE_L_LEG || zone == BODY_ZONE_R_LEG)
 	return FALSE
 

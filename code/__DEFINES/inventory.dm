@@ -66,7 +66,7 @@
 /// Armor vest slot
 #define ITEM_SLOT_ARMOR (1<<19)
 /// Chest rig slot
-#define ITEM_SLOT_CHESTRIG (1<<20)
+#define ITEM_SLOT_SOCKS (1<<20)
 /// Special storage slot
 #define ITEM_SLOT_SPECSTORAGE (1<<21)
 /// Underwear for the top half
@@ -96,7 +96,7 @@ DEFINE_BITFIELD(no_equip_flags, list(
 /// Slots that are physically on you
 #define ITEM_SLOT_ON_BODY (ITEM_SLOT_ICLOTHING | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_EYES | ITEM_SLOT_EARS | \
 	ITEM_SLOT_MASK | ITEM_SLOT_HEAD | ITEM_SLOT_FEET | ITEM_SLOT_ID | ITEM_SLOT_BELT | ITEM_SLOT_BACK | ITEM_SLOT_NECK | \
-	ITEM_SLOT_ARMOR | ITEM_SLOT_CHESTRIG | ITEM_SLOT_SPECSTORAGE | ITEM_SLOT_UNDERTOP | ITEM_SLOT_UNDERBOTTOM) // OUTERBOUNDS EDIT - Adds this line of slots
+	ITEM_SLOT_ARMOR | ITEM_SLOT_SOCKS | ITEM_SLOT_SPECSTORAGE | ITEM_SLOT_UNDERTOP | ITEM_SLOT_UNDERBOTTOM) // OUTERBOUNDS EDIT - Adds this line of slots
 
 //Bit flags for the flags_inv variable, which determine when a piece of clothing hides another. IE a helmet hiding glasses.
 //Make sure to update obscured_slots if you add more.

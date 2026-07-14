@@ -837,6 +837,7 @@ GLOBAL_ALIST_INIT(human_heights_to_offsets, alist(
 	#define BENEATH_HAIR_LAYER 8.1
 /// Back layer (for backpacks and equipment on your back)
 #define BACK_LAYER 9
+#define SPECSTORAGE_LAYER 9.5 // OUTERBOUNDS ADDITION
 /// Neck layer (for wearing capes and bedsheets)
 #define NECK_LAYER 10
 /// Suit storage layer (tucking a gun or baton underneath your armor)
@@ -851,6 +852,7 @@ GLOBAL_ALIST_INIT(human_heights_to_offsets, alist(
 	#define UNDER_SUIT_LAYER 14.1
 	/// Layer for neck apperal that should appear below the suit slot (like neckties)
 	#define LOW_NECK_LAYER 14.2
+#define ARMOR_LAYER 14.5 // OUTERBOUNDS ADDITION
 /// Ears layer (Spessmen have ears? Wow)
 #define EARS_LAYER 15
 	/// Layer for masks that are worn below ears and eyes (like Balaclavas) (layers below hair, use flagsinv=HIDEHAIR as needed)
@@ -869,6 +871,9 @@ GLOBAL_ALIST_INIT(human_heights_to_offsets, alist(
 #define UNIFORM_LAYER 19
 	/// The layer underneath the uniform
 	#define UNDER_UNIFORM_LAYER 19.1
+	#define UNDERWEAR_TOP_LAYER 19.25 // OUTERBOUNDS ADDITION
+	#define UNDERWEAR_BOTTOM_LAYER 19.5 // OUTERBOUNDS ADDITION
+	#define SOCKS_LAYER 19.75 // OUTERBOUNDS ADDITION
 /// Damage indicators (cuts and burns)
 #define DAMAGE_LAYER 20
 	/// Mutations that should appear above everything else (e.g. laser eyes)

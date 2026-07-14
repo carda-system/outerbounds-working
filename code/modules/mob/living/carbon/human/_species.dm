@@ -663,6 +663,18 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			if(H.num_legs < 2)
 				return FALSE
 			return TRUE
+		// OUTERBOUNDS ADDITION
+		if(ITEM_SLOT_ARMOR)
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		if(ITEM_SLOT_SOCKS)
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		if(ITEM_SLOT_SPECSTORAGE)
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		if(ITEM_SLOT_UNDERBOTTOM)
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		if(ITEM_SLOT_UNDERTOP)
+			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+		// OUTERBOUNDS ADDITION END
 	return FALSE //Unsupported slot
 
 /datum/species/proc/equip_delay_self_check(obj/item/I, mob/living/carbon/human/H, bypass_equip_delay_self)

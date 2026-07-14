@@ -730,8 +730,8 @@ GLOBAL_LIST_INIT(skin_tone_names, list(
 		slot_strings += "armor"
 	if(slot_flags & ITEM_SLOT_SPECSTORAGE)
 		slot_strings += "special storage"
-	if(slot_flags & ITEM_SLOT_CHESTRIG)
-		slot_strings += "chest"
+	if(slot_flags & ITEM_SLOT_SOCKS)
+		slot_strings += "socks"
 	if(slot_flags & ITEM_SLOT_UNDERBOTTOM)
 		slot_strings += "underwear bottoms"
 	if(slot_flags & ITEM_SLOT_UNDERTOP)

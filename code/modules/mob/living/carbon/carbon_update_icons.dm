@@ -3,6 +3,8 @@
 	switch(feature_key)
 		if(OFFSET_UNIFORM)
 			update_worn_undersuit()
+			update_worn_underbottom() // OUTERBOUNDS ADDITION
+			update_worn_undertop() // OUTERBOUNDS ADDITION
 		if(OFFSET_ID)
 			update_worn_id()
 		if(OFFSET_GLOVES)
@@ -13,6 +15,7 @@
 			update_worn_ears()
 		if(OFFSET_SHOES)
 			update_worn_shoes()
+			update_worn_socks() // OUTERBOUNDS ADDITION
 		if(OFFSET_S_STORE)
 			update_suit_storage()
 		if(OFFSET_FACEMASK)
@@ -26,8 +29,10 @@
 			update_worn_belt()
 		if(OFFSET_BACK)
 			update_worn_back()
+			update_worn_specstorage() // OUTERBOUNDS_ADDITION
 		if(OFFSET_SUIT)
 			update_worn_oversuit()
+			update_worn_armor() // OUTERBOUNDS ADDITION
 		if(OFFSET_NECK)
 			update_worn_neck()
 		if(OFFSET_HELD)

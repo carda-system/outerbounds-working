@@ -63,6 +63,11 @@ There are several things that need to be remembered:
 	update_worn_oversuit()
 	update_pockets()
 	update_worn_neck()
+	update_worn_armor() // OUTERBOUNDS ADDITION
+	update_worn_socks() // OUTERBOUNDS ADDITION
+	update_worn_specstorage() // OUTERBOUNDS ADDITION
+	update_worn_underbottom() // OUTERBOUNDS ADDITION
+	update_worn_undertop() // OUTERBOUNDS ADDITION
 	update_transform()
 	update_damage_overlays()
 	// These are done via parent call update_body(), keeping them here for clarity
