@@ -4,11 +4,20 @@
 	icon_state = "arasaka_tower"
 	screen_loc = ui_backpack_bar
 
+/atom/movable/screen/human/hands_bit
+	name = "quick access"
+	icon = 'modular_bounds/hud_and_item_slots/hud_icons/hands_bit_colonist.dmi'
+	icon_state = "hands_bit"
+	screen_loc = ui_hands_bit
+
 /atom/movable/screen/human/toggle
 	name = "equipment_tray"
 	icon = 'modular_bounds/hud_and_item_slots/hud_icons/equipment_tray_colonist.dmi'
 	icon_state = "clothes"
 	base_icon_state = "clothes"
+
+/atom/movable/screen/inventory/hand
+	icon = 'modular_bounds/hud_and_item_slots/hud_icons/screen_colonist.dmi'
 
 /datum/inventory_slot/human/armor
 	name = "armor"
@@ -77,15 +86,15 @@
 
 /datum/inventory_slot/human/l_pocket
 	icon_state = "pocket"
-	icon_full = "template_small"
+	icon_full = "full_inventory"
 
 /datum/inventory_slot/human/r_pocket
 	icon_state = "pocket"
-	icon_full = "template_small"
+	icon_full = "full_inventory"
 
 /datum/inventory_slot/human/suit_storage
 	icon_state = "suit_storage"
-	icon_full = "template"
+	icon_full = "suit_slot_full"
 
 /datum/inventory_slot/human/gloves
 	icon_state = "gloves"
