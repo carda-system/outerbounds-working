@@ -24,8 +24,8 @@
 	victim.treatable_conditions[CONDITION_POISONING] = src
 
 /datum/medical_condition/toxin/on_removal()
-	. = ..()
 	owner.treatable_conditions[CONDITION_POISONING] = null
+	return ..()
 
 /datum/medical_condition/toxin/owner_process(seconds_per_tick)
 	. = ..()

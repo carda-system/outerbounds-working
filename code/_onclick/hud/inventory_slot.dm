@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(inventory_slot_datums, initialize_inventory_slots())
 /datum/inventory_slot/proc/create_element(datum/hud/hud)
 	var/atom/movable/screen/inventory/inv_box = hud.add_screen_object(screen_type, HUD_KEY_ITEM_SLOT(slot_id), screen_group, inherit_style ? hud.ui_style : null, screen_loc)
 	inv_box.name = name
+	inv_box.icon = 'modular_bounds/hud_and_item_slots/hud_icons/screen_colonist.dmi' // OUTERBOUNDS ADDITION - Custom hud
 	inv_box.icon_state = icon_state
 	inv_box.icon_full = icon_full
 	inv_box.slot_id = slot_id

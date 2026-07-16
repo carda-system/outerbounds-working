@@ -24,7 +24,13 @@
 
 /obj/item/examine(mob/user)
 	. = ..()
-	if(carry_weight)
+	var/contents_weight = get_contents_weight()
+	if(carry_weight || contents_weight)
+		var/display_weight
+		if(!carry_weight)
+			display_weight = contents_weight
+		else
+			display_weight = carry_weight + contents_weight
 		var/feels_text = "looks"
 		var/should_show_weight = FALSE
 		if(user.is_holding(src))
@@ -37,7 +43,15 @@
 			if(carbon_user.get_attribute_score(ATTRIBUTE_INTUITION, TRUE) > 3)
 				should_show_weight = TRUE
 		if(should_show_weight)
-			. += span_notice("It [feels_text] about [round(carry_weight, 250) MILLI] kg.")
+			. += span_notice("It [feels_text] about [round(display_weight, 250) MILLI] kg.")
+
+/// Gets how much the internal contents of an item weighs
+/obj/item/proc/get_contents_weight()
+	var/contents_weight = 0
+	for(var/obj/item/stored_thing in contents)
+		if(!isnull(stored_thing.carry_weight))
+			contents_weight += stored_thing.carry_weight
+	return contents_weight
 
 /datum/movespeed_modifier/carry_weight
 	variable = TRUE

@@ -22,8 +22,8 @@
 	decide_reflex_offset()
 
 /datum/medical_condition/overburden/on_removal()
-	. = ..()
-	owner.adjust_attribute_modifier(ATTRIBUTE_REFLEX, -last_agility_offset)
+	owner?.adjust_attribute_modifier(ATTRIBUTE_REFLEX, -last_agility_offset)
+	return ..()
 
 /datum/medical_condition/overburden/owner_process(seconds_per_tick)
 	. = ..()

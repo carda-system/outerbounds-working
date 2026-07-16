@@ -431,6 +431,7 @@
 #include "code\__DEFINES\traits\macros.dm"
 #include "code\__DEFINES\traits\sources.dm"
 #include "code\__DEFINES\~bounds_defines\attributes.dm"
+#include "code\__DEFINES\~bounds_defines\hud.dm"
 #include "code\__DEFINES\~bounds_defines\jobs.dm"
 #include "code\__DEFINES\~bounds_defines\language.dm"
 #include "code\__DEFINES\~bounds_defines\loadout.dm"

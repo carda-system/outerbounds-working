@@ -156,7 +156,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	if (isnull(hud_key))
 		hud_key = REF(new_object)
 
-	if (!isnull(ui_icon))
+	if (!isnull(ui_icon) && (isnull(new_object.icon))) // OUTERBOUNDS EDIT - Make hud objects respect manually set icons - if (!isnull(ui_icon))
 		new_object.icon = ui_icon
 
 	if (!isnull(ui_loc))

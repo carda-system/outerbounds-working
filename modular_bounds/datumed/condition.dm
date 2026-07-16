@@ -61,6 +61,7 @@
 /datum/medical_condition/Destroy(force)
 	owner = null
 	owner_bodypart = null
+	on_removal(TRUE)
 	return ..()
 
 /// What to do to the mob and or the limb on application
@@ -89,32 +90,33 @@
 		source = condition_source
 
 /// What to do to the mob and or the limb on removal
-/datum/medical_condition/proc/on_removal()
+/datum/medical_condition/proc/on_removal(already_deleting = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
-	qdel(src)
-	if(isnull(owner))
+	if(!owner)
 		return
 	owner.medical_conditions -= src
+	if(!already_deleting)
+		qdel(src)
 
 /// Connected to life processing to the owner mob, for condition progression, or constant effects
-/datum/medical_condition/proc/owner_process(seconds_per_tick)
+/datum/medical_condition/proc/owner_process(seconds_per_tick, mob/living/carbon/current_owner)
 	SHOULD_CALL_PARENT(TRUE)
-	if(isnull(owner))
-		on_removal()
-		return
+	if(owner != current_owner)
+		owner = current_owner
 	var/obj/item/bodypart/owner_limb = owner.get_bodypart(owner.medical_conditions[src])
-	if((!istype(owner_limb) || isnull(owner_limb)) && !limb_independence)
+	if((!istype(owner_limb) || !owner_limb) && !limb_independence)
 		on_removal()
 		return
 	if(severity <= 0)
 		on_removal()
 		return
 	update_condition_name()
-	if(COOLDOWN_FINISHED(src, natural_healing_delay))
-		natural_healing()
-		COOLDOWN_START(src, natural_healing_delay, natural_cure_time / 20)
+	if(natural_cure_time)
+		if(COOLDOWN_FINISHED(src, natural_healing_delay))
+			natural_healing()
+			COOLDOWN_START(src, natural_healing_delay, natural_cure_time / 20)
 	health_offset = maximum_health_offset * SEVERITY_2_PERCENT(severity)
-	if(treatment_heal_multiplier >= 1)
+	if(treatment_heal_multiplier > 1)
 		condition_alerts_list |= list(
 			CONDITION_UI_TREATMENT_QUALITY = "This condition has been treated to a quality of [treatment_heal_multiplier * 100], changing the rate it heals at."
 		)

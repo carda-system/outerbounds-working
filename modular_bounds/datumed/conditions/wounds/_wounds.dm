@@ -33,8 +33,6 @@
 
 /datum/medical_condition/wound/on_removal()
 	var/list/treatable_conditions_list = owner?.treatable_conditions[CONDITION_BANDAGABLE]
-	if(isnull(owner))
-		return ..()
 	if(treatable_conditions_list.Find(src))
 		owner.treatable_conditions[CONDITION_BANDAGABLE] -= src
 	return ..()
