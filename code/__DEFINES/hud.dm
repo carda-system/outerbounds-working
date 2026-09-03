@@ -216,12 +216,12 @@
 #define ui_xenobiodisplay "WEST:6,CENTER:-4"
 
 //Lower center, persistent menu
-#define ui_sstore1 "CENTER+2:24,SOUTH+1:0" // OUTERBOUNDS EDIT - #define ui_sstore1 "CENTER-5:10,SOUTH:5"
+#define ui_sstore1 "CENTER+2:24,SOUTH:16" // OUTERBOUNDS EDIT - #define ui_sstore1 "CENTER-5:10,SOUTH:5"
 #define ui_id "WEST:16,SOUTH+8:16" // OUTERBOUNDS EDIT - #define ui_id "CENTER-4:12,SOUTH:5"
 #define ui_belt "WEST:16,SOUTH+6:16" // OUTERBOUNDS EDIT - #define ui_belt "CENTER-3:14,SOUTH:5"
 #define ui_back "WEST:16,SOUTH+7:16" // OUTERBOUNDS EDIT - #define ui_back "CENTER-2:14,SOUTH:5"
-#define ui_storage1 "CENTER-2:16,SOUTH+1:0" // OUTERBOUNDS EDIT - #define ui_storage1 "CENTER+1:18,SOUTH:5"
-#define ui_storage2 "CENTER+1:16,SOUTH+1:0" // OUTERBOUNDS EDIT - #define ui_storage2 "CENTER+2:20,SOUTH:5"
+#define ui_storage1 "CENTER+1:16,SOUTH:16" // OUTERBOUNDS EDIT - #define ui_storage1 "CENTER+1:18,SOUTH:5"
+#define ui_storage2 "CENTER-2:16,SOUTH:16" // OUTERBOUNDS EDIT - #define ui_storage2 "CENTER+2:20,SOUTH:5"
 #define ui_combo "CENTER+4:24,SOUTH+1:7" //combo meter for martial arts
 
 //Lower right, persistent menu
@@ -280,7 +280,7 @@
 #define ui_undertop "WEST:16,SOUTH+3:0"
 #define ui_underbottom "WEST:16,SOUTH+2:0"
 #define ui_backpack_bar "WEST:0,SOUTH+5:0"
-#define ui_hands_bit "CENTER-3:24,SOUTH:16"
+#define ui_hands_bit "CENTER-2:8,SOUTH:0"
 // OUTERBOUNDS ADDITIONS END
 
 //Generic living
